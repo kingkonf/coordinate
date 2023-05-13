@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (-webkit-device-pixel-ratio: 1.25) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+body #container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 2.08rem;
+  font-family: sans-serif;
+}
+@media (min-width: 1500px) {
+  body #container .heading {
+    padding: 3% 20%;
+  }
+}
+@media (max-width: 1500px) {
+  body #container .heading {
+    padding: 3% 5%;
+  }
+}
+body #container .hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+body #container .show {
+  opacity: 1;
+}
+body #container .row {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: stretch;
+}
+body #container .row .left,
+body #container .row .right {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body #container .row .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #container .row .left {
+  margin-right: 5rem;
+  justify-content: space-between;
+}
+body #container .row .left .rowHeading {
+  font-size: 4.8rem;
+}
+body #container .row .left a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+body #container .row .left a:hover {
+  cursor: pointer;
+  color: #5a5a5a;
+}
+body #container .row .left a:hover img {
+  animation-name: animate;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+}
+body #container .row .left a img {
+  width: 2.5rem;
+  margin-left: 2.5rem;
+}
+@media (max-width: 768px) {
+  body #container .row {
+    flex-direction: column;
+  }
+  body #container .row .rowHeading {
+    font-size: 4.5rem;
+  }
+  body #container .row > img {
+    margin: 2rem 1rem;
+  }
+  body #container .row .rowContent {
+    margin: 1rem 0rem;
+  }
+  body #container .row a {
+    margin: 1rem 0rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+  }
+  body #container .row a img {
+    width: 2.5rem;
+    margin-left: 2.5rem;
+  }
+}
+@media (min-width: 1500px) {
+  body #container {
+    padding: 3% 20%;
+  }
+}
+@media (max-width: 1500px) {
+  body #container {
+    padding: 5% 3%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    margin-left: 5rem;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 2.5rem;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */
